@@ -3,11 +3,12 @@ var highscoreButton = document.querySelector('#highscore-button');
 var startButton = document.querySelector('#start-button');
 var time = document.querySelector('#timer');
 
-var question = 1;
+var question = 0;
 var correctAnswers = 0;
 var timer;
+var timerSeconds;
 
-
+// todo: write elements for populate, add storage and ending screens
 //Questions taken/inspired from w3schools js quiz because I'm not creative enough https://www.w3schools.com/quiztest/quiztest.asp?qtest=JS
 var questions = {
     question1: {
@@ -102,4 +103,27 @@ function showHighscores (e) {
 function startQuiz (e) {
     console.log("start button clicked");
     landingElements.style.visibility = 'hidden';
+    correctAnswers = 0;
+    timerSeconds = 10;
+    startTimer();
+    populate();
+}
+
+function populate() {
+
+}
+
+function startTimer() {
+    timer = setInterval(function () {
+        timerSeconds--;
+        time.textContent = timerSeconds;
+        if(timerCount <= 0) {
+            clearInterval(timer);
+            endGame();
+        }
+    }, 1000)
+}
+
+function endGame() {
+    clearTimeout(timer);
 }
