@@ -2,16 +2,30 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" src="./Assets/css/reset.css">
-        <link rel="stylesheet" src="./Assets/css/style.css">
+        <link rel="stylesheet" href="./Assets/css/reset.css">
+        <link rel="stylesheet" href="./Assets/css/style.css">
         <title>Quiz Time</title>
     </head>
-
-    <header>
-
-    </header>
-
     <body>
-        
+        <header>
+            <button id="highscore-button">
+                View Highscores
+            </button>
+            <div class="row">
+                <p>Time: </p>
+                <p id="timer">60</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="text-contents" id="landing-contents">
+                <h1>Coding Quiz Challenge</h1>
+                <p class="description">Welcome to the Coding Quiz! Once you click the start button, you will have 60 seconds to answer 10 coding questions. The will be subtracted from the clock if a question is answered incorrectly.
+                     You will then see your highscores after the quiz is over. If you want to check the highscores before starting the quiz, you can click the view highscores link in the top left of the screen.</p>
+                <button id="start-button">Start Quiz</button>
+            </div>
+        </main>
+
+        <script src="./script.js"></script>
     </body>
 </html>
