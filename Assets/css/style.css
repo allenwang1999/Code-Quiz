@@ -51,3 +51,27 @@ h1 {
     align-items: center;
 }
 
+.text-contents button {
+    margin: 8px;
+}
+
+#quiz-contents {
+    display: none;
+}
+
+.submit {
+    align-items: center;
+}
+
+#name-input {
+    margin-left: 4px;
+}
+
+#end-contents {
+    display: none;
+}
+
+#score-contents {
+    display: none;
+}
+
